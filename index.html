@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6589154249528455" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKHXMP03LR"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-GKHXMP03LR');</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Borsa Kaplanı — Ücretsiz Kurgusal Borsa Simülatörü</title>
+  <meta name="description" content="Borsa Kaplanı tamamen kurgusal bir borsa simülatörüdür. Sanal portföy yönet, simüle edilmiş haberleri takip et, yatırım sezgini geliştir. Gerçek para yok.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#070a10">
+  <link rel="canonical" href="https://borsasim.netlify.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Borsa Kaplanı — Kurgusal Borsa Simülatörü">
+  <meta property="og:description" content="Sanal portföy yönet, simüle haberleri takip et, yatırım pratiği yap.">
+  <meta property="og:image" content="https://borsasim.netlify.app/og-image.png">
+  <meta property="og:url" content="https://borsasim.netlify.app/">
+  <meta property="og:locale" content="tr_TR">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"Borsa Kaplanı","url":"https://borsasim.netlify.app/","inLanguage":["tr","en"],"description":"Ücretsiz kurgusal borsa simülatörü."}
+  </script>
+</head>
+<body>
+
+<div id="app">
+  <header class="topbar">
+    <a href="index.html" class="brand">
+      <span class="bmark"><img src="favicon.png" alt="Borsa Kaplanı" onerror="this.replaceWith(document.createTextNode('🐯'))"></span>
+      <div><span data-i18n="brand.line1">BORSA</span><span data-i18n="brand.line2">KAPLANI</span><small data-i18n="brand.tag">BORSA SİMÜLATÖRÜ</small></div>
+    </a>
+    <div class="stats-strip">
+      <div class="stat"><span class="lbl" data-i18n="hdr.cash">Nakit</span><span class="val" id="hdrCash">$0</span></div>
+      <div class="stat"><span class="lbl" data-i18n="hdr.worth">Toplam Varlık</span><span class="val" id="hdrWorth">$0</span></div>
+      <div class="stat"><span class="lbl" data-i18n="hdr.pl">Kâr / Zarar</span><span class="val" id="hdrPL">$0</span></div>
+      <div class="stat"><span class="lbl" data-i18n="hdr.time">Süre</span><span class="val" id="hdrTime">00:00</span></div>
+    </div>
+    <div class="timer-pill"><span class="dot"></span><span data-i18n="hdr.live">Canlı</span><span class="num" id="hdrTimer">●</span></div>
+    <div class="lang-switch" id="langSwitch">
+      <button data-lang="tr">TR</button>
+      <button data-lang="en">EN</button>
+    </div>
+    <div class="actions">
+      <button id="btnSave" data-i18n="hdr.save">Kaydet</button>
+      <button id="btnNew" data-i18n="hdr.newGame">Yeni Oyun</button>
+    </div>
+  </header>
+
+  <div class="tickerbar"><div class="ticker-track" id="tickerTrack"></div></div>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-view="dashboard" data-i18n="nav.dashboard">Panel</button>
+    <button class="tab" data-view="market" data-i18n="nav.market">Piyasa</button>
+    <button class="tab" data-view="portfolio" data-i18n="nav.portfolio">Varlıklarım</button>
+    <button class="tab" data-view="watchlist" data-i18n="nav.watchlist">Takiptekiler</button>
+    <button class="tab" data-view="news" data-i18n="nav.news">Haberler</button>
+    <button class="tab" data-view="expert" data-i18n="nav.expert">Uzman Görüşü</button>
+    <button class="tab" data-view="team" data-i18n="nav.team">Ekibim</button>
+    <button class="tab" data-view="stats" data-i18n="nav.stats">İstatistikler</button>
+    <a href="rehber/" class="tab" data-i18n="nav.guide">📚 Rehber</a>
+    <a href="hakkinda.html" class="tab" data-i18n="nav.aboutLink">Hakkında</a>
+  </nav>
+
+  <main>
+    <div id="landingContent">
+      <section id="welcomeCard" class="card" style="margin-bottom:14px">
+        <h2 style="font-size:16px;margin-bottom:10px;color:var(--gold)" data-i18n="landing.title">🐯 Borsa Kaplanı'na Hoş Geldin</h2>
+        <p class="tiny muted" style="line-height:1.8;margin-bottom:12px" data-i18n-html="landing.desc"></p>
+        <div class="row">
+          <button id="btnStartGame" class="primary" data-i18n="landing.start">🎯 Oyunu Başlat</button>
+          <button id="btnLoadSaved" data-i18n="landing.load">📂 Kayıtlı Oyunu Yükle</button>
+        </div>
+      </section>
+      <section class="card" id="seoIntro" style="margin-bottom:14px">
+        <h2 style="font-size:15px;color:var(--gold);margin-bottom:10px" data-i18n="landing.aboutTitle">Borsa Kaplanı Nedir?</h2>
+        <div data-i18n-html="landing.aboutText"></div>
+      </section>
+    </div>
+
+    <section class="view active" id="view-dashboard"></section>
+    <section class="view" id="view-market"></section>
+    <section class="view" id="view-portfolio"></section>
+    <section class="view" id="view-watchlist"></section>
+    <section class="view" id="view-news"></section>
+    <section class="view" id="view-expert"></section>
+    <section class="view" id="view-team"></section>
+    <section class="view" id="view-stats"></section>
+  </main>
+
+  <footer class="footer-links">
+    <a href="hakkinda.html" data-i18n="footer.about">Hakkında</a>
+    <a href="gizlilik-politikasi.html" data-i18n="footer.privacy">Gizlilik Politikası</a>
+    <a href="kullanim-sartlari.html" data-i18n="footer.terms">Kullanım Şartları</a>
+    <a href="cerez-politikasi.html" data-i18n="footer.cookies">Çerez Politikası</a>
+    <a href="yasal-uyari.html" data-i18n="footer.disclaimer">Yasal Uyarı</a>
+    <a href="iletisim.html" data-i18n="footer.contact">İletişim</a>
+    <a href="rehber/" data-i18n="footer.guide">Rehber</a>
+    <div class="copy">© 2026 Borsa Kaplanı · <span data-i18n="footer.copy">Tüm hakları saklıdır.</span></div>
+  </footer>
+</div>
+
+<div id="newsAlert" class="hidden"></div>
+<div id="modal" class="modal hidden"></div>
+<div id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

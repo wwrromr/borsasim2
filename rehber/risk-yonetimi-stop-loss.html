@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6589154249528455" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKHXMP03LR"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-GKHXMP03LR');</script>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Risk Yönetimi ve Zarar Kes (Stop-Loss) Mantığı</title>
+  <meta name="description" content="Risk yönetimi nedir, stop-loss nasıl kullanılır? Pozisyon boyutlandırma, risk/getiri oranı ve sermaye koruma yöntemleri.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://borsasim.netlify.app/rehber/risk-yonetimi-stop-loss.html">
+  <link rel="icon" type="image/png" href="/favicon.png"><link rel="stylesheet" href="/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"Risk Yönetimi ve Stop-Loss","description":"Risk yönetimi ve zarar kes stratejileri.","author":{"@type":"Organization","name":"Borsa Kaplanı"},"publisher":{"@type":"Organization","name":"Borsa Kaplanı"},"datePublished":"2026-01-15","dateModified":"2026-01-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://borsasim.netlify.app/rehber/risk-yonetimi-stop-loss.html"},"inLanguage":"tr"}
+  </script>
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <a href="/" class="brand"><span class="bmark"><img src="/favicon.png" alt="Borsa Kaplanı"></span><div><span>BORSA</span><span>KAPLANI</span><small>BORSA SİMÜLATÖRÜ</small></div></a>
+    <div class="stats-strip"></div>
+    <div class="actions"><a href="/" class="back-btn" style="text-decoration:none">← Oyuna Dön</a><a href="/rehber/" class="back-btn" style="text-decoration:none">📚 Rehber</a></div>
+  </header>
+  <main>
+    <div class="page-content">
+      <div class="crumbs"><a href="/">Ana Sayfa</a> › <a href="/rehber/">Rehber</a> › Risk Yönetimi</div>
+      <h1>Risk Yönetimi ve Zarar Kes (Stop-Loss) Mantığı</h1>
+      <p class="meta">📅 15 Ocak 2026 · ⏱ 8 dk okuma · Kategori: Strateji</p>
+
+      <p class="lead">Başarılı yatırımcıları başarısız olanlardan ayıran en önemli faktör <b>kazanma oranı değil, risk yönetimidir</b>. Bir yatırımcı 10 işlemden 8'inde kazanıp 2'sinde tüm sermayesini kaybedebilir. Ancak risk yönetimi öğrenen bir yatırımcı, 10 işlemden 5'inde kazansa bile uzun vadede kârlı çıkar. Bu yazıda risk yönetiminin temellerini ve zarar kes (stop-loss) mantığını öğreneceksiniz.</p>
+
+      <h2>Risk Yönetimi Nedir?</h2>
+      <p>Risk yönetimi, yatırım sermayenizi korumak için aldığınız önlemlerdir. Amaç <b>kayıpları sınırlamak</b> ve <b>kazanç potansiyelini korumaktır</b>. Risk yönetimi olmayan bir yatırımcı, tek bir kötü işlemle aylarca emek vererek biriktirdiği parayı kaybedebilir.</p>
+      <p>Temel prensip: <b>Her işlemde kaybetmeye razı olduğunuz tutarı önceden belirleyin.</b> Bu tutar, toplam sermayenizin %1–2'sini geçmemelidir.</p>
+
+      <h2>Pozisyon Boyutlandırma</h2>
+      <p>Bir hisseye ne kadar para koyacağınız, risk yönetiminin en kritik parçasıdır. Yanlış boyutlandırılmış bir pozisyon, doğru analizle bile zarar getirebilir.</p>
+      <h3>Formül</h3>
+      <blockquote>Pozisyon Büyüklüğü = (Sermaye × Riske Atılan %) ÷ (Giriş Fiyatı − Stop Fiyatı)</blockquote>
+      <h3>Örnek</h3>
+      <p>Sermayeniz 100.000 TL. Her işlemde %2 risk almayı kabul ediyorsunuz (2.000 TL). 40 TL'den hisse alacaksınız, stop 36 TL:</p>
+      <p>Pozisyon = 2.000 ÷ (40 − 36) = 2.000 ÷ 4 = <b>500 hisse</b> → 20.000 TL yatırım.</p>
+      <p>Bu şekilde hisse %10 düşse bile (36 TL'ye), toplam kaybınız yalnızca 2.000 TL (%2) olur.</p>
+
+      <h2>Zarar Kes (Stop-Loss) Nedir?</h2>
+      <p><b>Stop-loss</b>, önceden belirlenen fiyata geldiğinde hissenizi otomatik olarak satan bir emir türüdür. Duygusal kararları devre dışı bırakır ve kaybınızı sınırlar.</p>
+      <h3>Stop-Loss Nereye Konur?</h3>
+      <ul>
+        <li><b>Teknik destek seviyelerinin altına</b> (grafikte dip noktaları).</li>
+        <li><b>Belirli bir yüzde altına</b> (örn. giriş fiyatının %7–10 altı).</li>
+        <li><b>Volatiliteye göre</b> (ATR — Average True Range kullanılır).</li>
+      </ul>
+      <p>Stop çok yakın olursa normal dalgalanmada tetiklenir; çok uzak olursa kayıp büyür. Tipik olarak <b>%5–10 arası</b> bir aralık bireysel yatırımcı için makuldür.</p>
+
+      <h2>Trailing Stop</h2>
+      <p>Hisse yükseldikçe stop seviyesini yukarı taşıyan dinamik bir yöntemdir. Örneğin:</p>
+      <ul>
+        <li>Hisse 40 TL'den aldınız, stop 36 TL'de.</li>
+        <li>Hisse 45 TL'ye çıktı, stop 41 TL'ye yükseltti.</li>
+        <li>Hisse 50 TL'ye çıktı, stop 46 TL'ye yükseltti.</li>
+      </ul>
+      <p>Bu şekilde kârınızı koruyabilirsiniz. Ancak stop çok sıkı olursa trend devam ederken erken çıkabilirsiniz.</p>
+
+      <h2>Risk/Getiri Oranı</h2>
+      <p>Her işlemde <b>riske atılan tutar</b> ile <b>beklenen kazanç</b> oranı önemlidir. Sağlıklı bir oran <b>1:2 veya daha iyidir</b>.</p>
+      <h3>Örnek</h3>
+      <p>Giriş: 40 TL. Stop: 36 TL (4 TL risk). Hedef: 48 TL (8 TL kazanç). Risk/Getiri = 4:8 = <b>1:2</b>.</p>
+      <p>Bu oranla 10 işlemden sadece 4'ünde kâr etseniz bile genel sonuç kârlıdır:</p>
+      <ul>
+        <li>4 kazanç × 8 TL = +32 TL</li>
+        <li>6 kayıp × 4 TL = −24 TL</li>
+        <li><b>Net: +8 TL</b> (sadece %40 kazanma oranıyla!)</li>
+      </ul>
+
+      <h2>Duygusal Tuzaklar</h2>
+      <p>Stop-loss koymak kolay, uygulamak zordur. Çünkü insan psikolojisi kaybı kabullenmekte zorlanır:</p>
+      <ul>
+        <li><b>"Biraz daha bekleyeyim, düzelir"</b> — Bu, en pahalı cümledir. Küçük bir kayıp, büyük bir felakete dönüşebilir.</li>
+        <li><b>"Ortalama düşürürüm"</b> — Düşen bir hisseye ek alım yapmak (averaging down), trende karşı savaşmaktır. Bazen işe yarar, çoğu zaman sermayeyi eritir.</li>
+        <li><b>"Kârı erken alayım"</b> — Kazandığınızda hemen satmak, kayıplarınızı taşımaya devam ederken kazançlarınızı sınırlar. Bu, klasik bir yatırımcı hatasıdır.</li>
+        <li><b>İntikam ticareti (revenge trading)</b> — Kaybettikten hemen sonra daha büyük pozisyon açarak kaybı geri almaya çalışmak. Genellikle daha büyük kayıpla biter.</li>
+      </ul>
+
+      <h2>Diğer Risk Yönetimi Kuralları</h2>
+      <ol>
+        <li><b>Kaldıraç kullanmayın</b> (özellikle yeni başlarken). Borç parayla yatırım, kayıpları katlar.</li>
+        <li><b>Aynı anda çok pozisyon açmayın.</b> 10 farklı hisseye aynı anda girmek, riski dağıtmaz; korelasyonlu iseler artırır.</li>
+        <li><b>Piyasa koşullarını dikkate alın.</b> Belirsizlik dönemlerinde pozisyonları küçültün.</li>
+        <li><b>Günlük/altyapı kaybı limiti belirleyin.</b> Örneğin günlük %3 kaybederseniz o gün işlem yapmayı bırakın.</li>
+        <li><b>İşlem günlüğü tutun.</b> Her işlemin gerekçesini, giriş/çıkış fiyatını not edin. Ay sonunda analiz edin.</li>
+      </ol>
+
+      <h2>Örnek Strateji: 3 Adımlı Risk Planı</h2>
+      <ol>
+        <li><b>Analiz:</b> Şirketin F/K'sı, büyümesi, sektörü, haber akışı incelenir.</li>
+        <li><b>Giriş planı:</b> Hedef fiyat, stop fiyat ve pozisyon büyüklüğü belirlenir.</li>
+        <li><b>Yönetim:</b> Hisse hedefe doğru gidiyorsa stop yukarı taşınır (trailing). Hedef yakınında kademeli satış yapılır.</li>
+      </ol>
+
+      <h2>Simülatörde Risk Yönetimi Pratiği</h2>
+      <p>Borsa Kaplanı'nda <a href="/">sanal portföyünüzle</a> yukarıdaki kuralları test edebilirsiniz. Kaybınız gerçek olmadığı için rahatça hata yapabilir ve doğru alışkanlıkları geliştirebilirsiniz. Portföy danışmanı çalışanını işe alırsanız yoğunlaşma uyarıları görürsünüz.</p>
+
+      <h2>İlgili Yazılar</h2>
+      <ul>
+        <li><a href="/rehber/portfoy-cesitlendirme.html">Portföy Çeşitlendirme</a></li>
+        <li><a href="/rehber/yatirimci-psikolojisi.html">Yatırımcı Psikolojisi</a></li>
+        <li><a href="/rehber/borsa-kaplani-strateji.html">Borsa Kaplanı Strateji İpuçları</a></li>
+      </ul>
+
+      <div class="notice"><b>Yasal Uyarı:</b> Bu içerik genel bilgilendirme amaçlıdır ve <b>yatırım tavsiyesi değildir</b>.</div>
+    </div>
+  </main>
+  <footer class="footer-links"><a href="/hakkinda.html">Hakkında</a><a href="/gizlilik-politikasi.html">Gizlilik Politikası</a><a href="/kullanim-sartlari.html">Kullanım Şartları</a><a href="/cerez-politikasi.html">Çerez Politikası</a><a href="/yasal-uyari.html">Yasal Uyarı</a><a href="/iletisim.html">İletişim</a><a href="/rehber/">Rehber</a><div class="copy">© 2026 Borsa Kaplanı</div></footer>
+</div>
+</body>
+</html>

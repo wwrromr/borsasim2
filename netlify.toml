@@ -1,0 +1,21 @@
+[build]
+  publish = "."
+
+# Sitemap ve robots.txt dosyalarının doğru sunulması
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap.xml"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/robots.txt"
+  to = "/robots.txt"
+  status = 200
+  force = true
+
+# 404 sayfası yönlendirmesi
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
